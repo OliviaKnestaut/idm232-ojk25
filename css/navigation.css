@@ -67,6 +67,13 @@ li{
     margin-top: 8px;
     text-decoration: none;
 }
+.logo{
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    text-decoration: none !important;
+}
+
 
 /* menu */
 

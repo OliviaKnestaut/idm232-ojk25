@@ -100,8 +100,8 @@
 @media (width <= 700px) {
     .world-map {
         background-image: url(../files/world-map-mobile.svg);
-        height: 182vw;
-        width: 94vw;
+        height: 174vw;
+        width: 90vw;
     }
     .pin1 {
         top: 31%;
