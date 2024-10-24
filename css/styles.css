@@ -380,6 +380,20 @@ section.recipe-steps {
     font-size: 30px;
 }
 
+#help-map{
+    background-image: url(../files/images/map_help_screenshot.png);
+    height: 300px;
+}
+#card-help{
+    height: 300px;
+    border-radius: 10px;
+}
+.help-section{
+    justify-content: end;
+}
+.help-section p{
+    max-width: none;
+}
 
 /*SMALL SCREENS*/
 @media (max-width: 768px) {
@@ -442,6 +456,10 @@ section.recipe-steps {
     .header-image {
         width: 100%;
         height: 350px;
+    }
+    #card-help{
+        width: 100%;
+        height: auto;
     }
 }
 

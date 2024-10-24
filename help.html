@@ -8,17 +8,53 @@
     <link rel="stylesheet" href="css/navigation.css">
 </head>
 <body>
-    <header class="header">
-        <a href="#" class="logo">
+    <div class="body">
+        <header class="header">
+            <a href="index.html" class="logo">
+                <img class="compass-logo" src="files/grey-logo.svg" alt="Culinary Cuisine Compass Logo">
+            </a>
+            <input class="menu-btn" type="checkbox" id="menu-btn" />
+            <label class="menu-icon" for="menu-btn"><span class="navicon"></span></label>
+            <ul class="menu">
+                <li><a href="index.html">home</a></li>
+                <li><a href="recipes_grid.html">recipes</a></li>
+                <li><a href="help.html">help</a></li>
+            </ul>
+        </header>
+
+        <div class="title">
+            <h1></h1>
+        </div>
+        
+        <div class="container">
+            <!-- Recipe Header Section -->
+            <section class="recipe-header">
+                <span id="help-map" class="header-image"></span>
+                <div class="recipe-info">
+                    <h2 class="recipe-title">Using the Culinary Map</h2>
+                    <h3 class="recipe-subtitle">Find all your favorites at your fingertips!</h3>
+                    <p class="description">On your computer hover over the different pins to learn the different cuisines. Click or tap on a region's pin to discover meals from that part of the world.<br><br>(On a mobile device try holding down on the pin!)</p>
+                </div>
+            </section>
+        </div>
+        <div class="container">
+            <!-- Recipe Header Section -->
+            <section class="recipe-header help-section">
+                <div class="recipe-info">
+                    <h2 class="recipe-title">Reading a Recipe Card</h2>
+                    <h3 class="recipe-subtitle">Pick the best recipe for your needs!</h3>
+                    <p class="description">Our recipes are pulled from an extensive database created by travelling chef Olivia Knestaut. In order to best present these recipes to you some of the core information is shared on each recipe card. Each recipe card presents the expected cook time, servings, world cuisine, and applicable diets. We hope this information can aid you in selecting an amazing dish to cook up in your kitchen.</p>
+                </div>
+                <img id="card-help" src="files/images/card_help_screenshot.png" alt="">
+            </section>
+        </div>
+    </div>
+
+    <footer>
+        <a href="index.html" class="logo">
             <img class="compass-logo" src="files/grey-logo.svg" alt="Culinary Cuisine Compass Logo">
+            <h2>CULINARY COMPASS</h2>
         </a>
-        <input class="menu-btn" type="checkbox" id="menu-btn" />
-        <label class="menu-icon" for="menu-btn"><span class="navicon"></span></label>
-        <ul class="menu">
-            <li><a href="index.html">home</a></li>
-            <li><a href="recipes.html">recipes</a></li>
-            <li><a href="help.html">help</a></li>
-        </ul>
-    </header>
+    </footer>
 </body>
 </html>
