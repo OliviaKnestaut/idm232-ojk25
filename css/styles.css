@@ -395,6 +395,10 @@ section.recipe-steps {
     max-width: none;
 }
 
+.style-tile{
+    width: 100%;
+}
+
 /*SMALL SCREENS*/
 @media (max-width: 768px) {
     h1 {

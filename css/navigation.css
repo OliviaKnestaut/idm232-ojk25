@@ -74,6 +74,12 @@ li{
     text-decoration: none !important;
 }
 
+.footer-link{
+    color: var(--yellow);
+    text-decoration: underline !important;
+    float: right;
+}
+
 
 /* menu */
 
