@@ -1,0 +1,328 @@
+
+html{
+    --background:#405967 !important;
+    --yellow:#FFC145 !important;
+    --green:#A0BB69 !important;
+    --grey:#C5CDD1 !important;
+    --text: #222222 !important;
+    
+    --Afacad: 'Afacad', Arial, sans-serif ;
+    --rhythm: 24px;
+}
+
+
+/* All Recipes Grid */
+.recipe-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 25px;
+    justify-items: center;
+    align-items: stretch;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.recipe-card {
+    background-color: var(--grey);
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 350px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.recipe-card:hover {
+    transform: scale(1.05);
+}
+
+.recipe-image {
+    width: 100%;
+    height: 200px;
+    border-bottom: 4px solid #333;
+    background-image: url(../files/0101_FPP_Chicken-Rice_97338_WEB_SQ_hi_res.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.recipe-title {
+    font-size: 2rem;
+    color: #333;
+    margin: 0;
+    text-align: left;
+}
+
+.recipe-subtitle {
+    font-size: 1.5rem;
+    color: #4B4B4B;
+    margin: 0;
+    text-align: left;
+}
+
+.recipe-details{
+    color: #333;
+    margin-top: 10px;
+    display: flex;
+    flex-wrap: wrap;
+}
+.recipe-details > div{
+    margin-right: 20px;
+}
+.recipe-card .recipe-content{
+    margin: 20px;
+}
+
+
+
+
+.cook-time, .cuisine, .diet, .servings{
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    margin: 0;
+    height: 42.67;
+}
+
+.cuisine, .diet{
+    margin: 10px 0;
+}
+
+/*Cook Time*/
+.cook-time-img{
+    width: 30px;
+}
+
+/*Cuisine*/
+.mexican{
+    background-color: #F3A7A7;
+    border: #B15D5D solid 2px;
+    color: #333;
+}
+
+/*Diet Buttons*/
+.diet-item, .cuisine-item{
+    padding: 2px 12px;
+    border-radius: 50vw;
+    text-decoration: none;
+    font-weight: 600;
+}
+.halal{
+    background-color: #A0BB69;
+    border: #6B8439 solid 2px;
+    color: #333;
+}
+.gluten-free{
+    background-color: #F8CF7C;
+    border: #FFC145 solid 2px;
+    color: #333;
+}
+/*Servings*/
+.serving-img{
+    width: 20px;
+}
+
+
+/*Recipe Page*/
+
+.container, aside, .recipe-steps{
+    margin: 10px 0;
+    background-color: var(--grey);
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+.header-container{
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 20px;
+}
+
+.description{
+    max-width: 415px;
+}
+
+/* Recipe Header Section */
+.recipe-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.header-image {
+    width: 100%;
+    height: 300px;
+    border-radius: 10px;
+    background-image: url(../files/0101_FPP_Chicken-Rice_97338_WEB_SQ_hi_res.jpg); /* The image used */
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-size: cover; /* Resize the background image to cover the entire container */
+}
+
+/* Description Section */
+.recipe-description {
+    margin-bottom: 30px;
+}
+
+.recipe-description p {
+    font-size: 1rem;
+    color: #555;
+    line-height: 1.6;
+}
+
+/* Ingredients Section */
+.recipe-ingredients {
+    margin-bottom: 30px;
+    max-width: 200px;
+}
+
+.recipe-ingredients h3 {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.ingredients-image {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.recipe-ingredients ul {
+    list-style-type: none;
+    color: #555;
+}
+
+/* Steps Section */
+.recipe-steps h3 {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+
+
+
+
+
+
+
+main.recipe-content {
+    display: flex;
+}
+
+/* Ingredients Sidebar */
+aside.ingredients {
+    width: 25%;
+    position: -webkit-sticky; /* Safari support */
+    position: sticky;
+    top: 80px; /* Sticks 20px below the top of the viewport */
+    align-self: flex-start; /* Ensures it sticks relative to the main content */
+    height: max-content; /* Allows sticky positioning to work with the sidebar's height */
+}
+
+.ingredients ul {
+    list-style-type: none;
+    padding-left: 0;
+    margin: 0;
+}
+
+.ingredients ul li {
+    margin: 5px 0;
+}
+
+/* Recipe Steps */
+section.recipe-steps {
+    width: 75%;
+    margin-left: 20px;
+}
+
+.recipe-steps img {
+    max-width: 100%;
+    margin-bottom: -10px;
+    margin-top: 20px;
+    border-radius: 8px;
+}
+.step-title{
+    display: flex;
+    align-items: center;
+}
+.step-title h4{
+    color: var(--background);
+    font-size: 2rem;
+    line-height: 2rem;
+}
+.step-num{
+    color: #31454F;
+    font-size: 50px;
+}
+.recipe-steps ul{
+    list-style: none;
+    padding: 0;
+}
+.recipe-steps p{
+    margin-left: 60px;
+}
+
+.recipe-info {
+    padding-top: 20px;
+}
+
+
+
+
+/* Responsive Styles for Mobile */
+@media (max-width: 768px) {
+    main.recipe-content {
+        flex-direction: column;
+    }
+
+    aside.ingredients {
+        width: 100%;
+        margin-bottom: 20px;
+        border-right: none;
+        border-bottom: 1px solid #ddd;
+        position: static; /* Sticky behavior disabled on small screens */
+    }
+
+    section.recipe-steps {
+        width: 100%;
+        margin-left: 0;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Media Queries for Responsiveness */
+@media (min-width: 768px) {
+    .recipe-header {
+        flex-direction: row;
+        text-align: left;
+    }
+
+    .recipe-info {
+        margin-left: 20px;
+        padding: 0;
+    }
+
+    .header-image {
+        width: 60%;
+        height: 400px;
+    }
+
+    .recipe-card {
+        max-width: 400px;
+    }
+}
+

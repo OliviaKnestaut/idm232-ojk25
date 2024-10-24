@@ -1,0 +1,160 @@
+@font-face {
+    font-family: 'Afacad';
+    src: url('../files/font/Afacad/Afacad-VariableFont_wght.ttf') format('truetype');
+    font-weight: 400;
+}
+
+html{
+    --background:#405967 !important;
+    --yellow:#FFC145 !important;
+    --green:#A0BB69 !important;
+    --grey:#C5CDD1 !important;
+    --text: #222222 !important;
+    
+    --Afacad: 'Afacad', Arial, sans-serif ;
+    --rhythm: 24px;
+}
+
+
+/*NAVIGATION*/
+
+a {
+    color: var(--grey);
+}
+img.compass-logo{
+    height: 43px;
+}
+li{
+    font-size: 30px;
+}
+
+/* header */
+
+.header {
+    background-color: #31454F;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+}
+
+.header ul {
+    margin: 5px 0;
+    padding: 0;
+    list-style: none;
+    overflow: hidden;
+}
+
+.header li a {
+    display: block;
+    margin: 5px 5px;
+    padding: 0 10px;
+    text-decoration: none;
+}
+
+.header li a:hover, .header .menu-btn:hover {
+    background-color: var(--grey);
+    border-radius: 50vw;
+    color: var(--background) !important;
+}
+
+.header .logo {
+    display: block;
+    float: left;
+    padding: 0 20px;
+    margin: 5px 0;
+    margin-top: 8px;
+    text-decoration: none;
+}
+
+/* menu */
+
+.header .menu {
+    clear: both;
+    max-height: 0;
+    transition: max-height .2s ease-out;
+}
+
+  /* menu icon */
+
+.header .menu-icon {
+    cursor: pointer;
+    float: right;
+    padding: 28px 20px;
+    position: relative;
+    user-select: none;
+}
+
+.header .menu-icon .navicon {
+    background: var(--grey);
+    display: block;
+    height: 2px;
+    position: relative;
+    transition: background .2s ease-out;
+    width: 18px;
+}
+
+.header .menu-icon .navicon:before, .header .menu-icon .navicon:after {
+    background: var(--grey);
+    content: '';
+    display: block;
+    height: 100%;
+    position: absolute;
+    transition: all .2s ease-out;
+    width: 100%;
+}
+
+.header .menu-icon .navicon:before {
+    top: 5px;
+}
+
+.header .menu-icon .navicon:after {
+    top: -5px;
+}
+
+/* menu btn */
+
+.header .menu-btn {
+    display: none;
+}
+
+.header .menu-btn:checked ~ .menu {
+    max-height: 240px;
+}
+
+.header .menu-btn:checked ~ .menu-icon .navicon {
+    background: transparent;
+}
+
+.header .menu-btn:checked ~ .menu-icon .navicon:before {
+    transform: rotate(-45deg);
+}
+
+.header .menu-btn:checked ~ .menu-icon .navicon:after {
+    transform: rotate(45deg);
+}
+
+.header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:before, .header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:after {
+    top: 0;
+}
+
+  /* 48em = 768px */
+
+@media (min-width: 48em) {
+    .header li {
+        float: left;
+    }
+    .header li a {
+        margin: 5px 5px;
+        padding: 0 10px;
+    }
+    .header .menu {
+        clear: none;
+        float: right;
+        max-height: none;
+    }
+    .header .menu-icon {
+        display: none;
+    }
+}

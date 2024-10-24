@@ -1,0 +1,154 @@
+.world-map{
+    position: relative;
+    background-image: url("../files/world-map.svg");
+    height: 48vw;
+    width: 94vw;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover; 
+    margin: 20px auto;
+}
+
+.map-pin{
+    width: 30px;
+    transition: 0.5s ease;
+}
+.map-pin:hover {
+    transform: scale(1.2);
+}
+
+.pin {
+    position: absolute;
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: flex-start;
+    align-items: center;
+    height: 42.8px;
+    width: 30px;
+    margin-left: -15px;
+    margin-top: -40px;
+}
+
+.map-pin:hover + .popup{
+    transform: translate(0px, -10px);
+    opacity: 1;
+    visibility: visible;
+}
+
+.popup {
+    background-color: var(--grey);
+    padding: 4px;
+    margin: 0px 0;
+    border-radius: 5px;
+    max-width: 300px;
+    transition: 0.5s;
+    opacity: 0;
+    z-index: 100;
+    transition-timing-function: cubic-bezier(.63,-0.33,.32,1.4);
+    visibility: hidden;
+}
+
+.pin1 {
+    top: 52%;
+    left: 18.75%;
+}
+.pin2 {
+    top: 44%;
+    left: 23%;
+}
+.pin3 {
+    top: 38%;
+    left: 47.5%;
+}
+.pin4 {
+    top: 40.75%;
+    left: 50.75%;
+}
+.pin5 {
+    top: 45.75%;
+    left: 53.75%;
+}
+.pin6 {
+    top: 49.75%;
+    left: 58.75%;
+}
+.pin7 {
+    top: 55%;
+    left: 68.7%;
+}
+.pin8 {
+    top: 57%;
+    left: 74.7%;
+}
+.pin9 {
+    top: 43%;
+    left: 72.7%;
+}
+.pin10 {
+    top: 44.2%;
+    left: 82.4%;
+}
+.pin11 {
+    top: 44.6%;
+    left: 85.4%;
+}
+.pin12 {
+    top: 48.6%;
+    left: 78.4%;
+}
+
+@media (width <= 700px) {
+    .world-map {
+        background-image: url(../files/world-map-mobile.svg);
+        height: 182vw;
+        width: 94vw;
+    }
+    .pin1 {
+        top: 31%;
+        left: 42.75%;
+    }
+    .pin2 {
+        top: 26%;
+        left: 52%;
+    }
+    .pin3 {
+        top: 75%;
+        left: 9.5%;
+    }
+    .pin4 {
+        top: 76.2%;
+        left: 14.5%;
+    }
+    .pin5 {
+        top: 78.5%;
+        left: 19.75%;
+    }
+    .pin6 {
+        top: 80.75%;
+        left: 28.75%;
+    }
+    .pin7 {
+        top: 83%;
+        left: 45.7%;
+    }
+    .pin8 {
+        top: 83.5%;
+        left: 56.6%;
+    }
+    .pin9 {
+        top: 77%;
+        left: 50.7%;
+    }
+    .pin10 {
+        top: 77.8%;
+        left: 69.3%;
+    }
+    .pin11 {
+        top: 77.9%;
+        left: 74.4%;
+    }
+    .pin12 {
+        top: 79.6%;
+        left: 61.4%;
+    }
+}
