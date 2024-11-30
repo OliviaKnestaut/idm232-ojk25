@@ -1,6 +1,6 @@
 .world-map{
     position: relative;
-    background-image: url("../files/world-map.svg");
+    background-image: url(../files/general-images/world-map.svg);
     height: 48vw;
     width: 94vw;
     background-position: center;
@@ -99,7 +99,7 @@
 
 @media (width <= 700px) {
     .world-map {
-        background-image: url(../files/world-map-mobile.svg);
+        background-image: url(../files/general-images/world-map-mobile.svg);
         height: 174vw;
         width: 90vw;
     }

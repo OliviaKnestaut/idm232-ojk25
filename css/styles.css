@@ -22,7 +22,10 @@ body {
     font-family: var(--Afacad);
     background-color: var(--background);
     margin: 0;
-    margin-top: 80px;
+    margin-top: 50px;
+    min-height: calc(100vh - 50px);
+    display: flex;
+    flex-direction: column;
 }
 .body{
     margin: 20px;
@@ -69,6 +72,7 @@ footer{
     background-color: #31454F;
     width: 100%;
     padding: 0 20px;
+    margin-top: auto;
 }
 
 
@@ -134,7 +138,7 @@ footer{
     width: 100%;
     height: 200px;
     border-bottom: 4px solid #333;
-    background-image: url(../files/images/Cover_Image.jpg);
+
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -158,6 +162,7 @@ footer{
     color: #333;
     margin-top: 10px;
     display: flex;
+    flex-direction: column;
     flex-wrap: wrap;
 }
 
@@ -176,7 +181,13 @@ footer{
     gap: 8px;
     align-items: center;
     margin: 0;
-    height: 42.67;
+}
+
+.diet div, .cuisine div{
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    flex-wrap: wrap;
 }
 
 .cuisine, .diet{
@@ -189,11 +200,88 @@ footer{
 }
 
 /*Cuisine*/
-.mexican{
-    background-color: #F3A7A7;
-    border: #B15D5D solid 2px;
+.Mexican, .Vegetarian{
+    background-color: #7DB193;
+    border: #146C39 solid 2px;
     color: #333;
 }
+.French{
+    background-color: #EAB1B8;
+    border: #D98D97 solid 2px;
+    color: #333;
+}
+.American, .Pescatarian{
+    background-color: #6E8DB4;
+    border: #12397B solid 2px;
+    color: #333;
+}
+.Italian, .Spicy{
+    background-color: #F38C84;
+    border: #D92316 solid 2px;
+    color: #333;
+}
+.Seafood{
+    background-color: #7DB0CD;
+    border: #2F8ABE solid 2px;
+    color: #333;
+}
+.Chinese, .Gluten{
+    background-color: #E7D083;
+    border: #DDAA00 solid 2px;
+    color: #333;
+}
+.Asian-Fusion{
+    background-color: #B389C3;
+    border: #4F1F63 solid 2px;
+    color: #333;
+}
+.Middle{
+    background-color: #BFB5AB;
+    border: #79553F solid 2px;
+    color: #333;
+}
+.Southern-Style{
+    background-color: #FFB761;
+    border: #F48C11 solid 2px;
+    color: #333;
+}
+.Mediterranean{
+    background-color: #E28AA7;
+    border: #C53463 solid 2px;
+    color: #333;
+}
+.Seasonal, .Vegan{
+    background-color: #C7CA89;
+    border: #7A7A32 solid 2px;
+    color: #333;
+}
+.Thai{
+    background-color: #B9E895;
+    border: #64A432 solid 2px;
+    color: #333;
+}
+.Indian, .Halal{
+    background-color: #D08352;
+    border: #913900 solid 2px;
+    color: #333;
+}
+.Korean{
+    background-color: #FFEECB;
+    border: #E9C06F solid 2px;
+    color: #333;
+}
+.Japanese{
+    background-color: #59B0A6;
+    border: #17625A solid 2px;
+    color: #333;
+}
+.None{
+    background-color: #C5CDD1;
+    border: #7E868A solid 2px;
+    color: #333;
+}
+
+
 
 /*Diet*/
 .diet-item, .cuisine-item{
@@ -202,16 +290,9 @@ footer{
     text-decoration: none;
     font-weight: 600;
 }
-.halal{
-    background-color: #A0BB69;
-    border: #6B8439 solid 2px;
-    color: #333;
-}
-.gluten-free{
-    background-color: #F8CF7C;
-    border: #FFC145 solid 2px;
-    color: #333;
-}
+
+
+
 /*Servings*/
 .serving-img{
     width: 20px;
@@ -243,12 +324,10 @@ footer{
     flex-direction: row;
     align-items: center;
 }
-
 .header-image {
     width: 60%;
-    height: 400px;
+    height: 500px;
     border-radius: 10px;
-    background-image: url(../files/images/Cover_Image.jpg); /* The image used */
     background-position: center; /* Center the image */
     background-repeat: no-repeat; /* Do not repeat the image */
     background-size: cover; /* Resize the background image to cover the entire container */
@@ -271,11 +350,6 @@ main.recipe-content {
 /* Ingredients Sidebar */
 aside.ingredients {
     width: 25%;
-    position: -webkit-sticky; /* Safari support */
-    position: sticky;
-    top: 80px; /* Sticks 20px below the top of the viewport */
-    align-self: flex-start; /* Ensures it sticks relative to the main content */
-    height: max-content; /* Allows sticky positioning to work with the sidebar's height */
 }
 
 .ingredients-image {
@@ -288,7 +362,13 @@ aside.ingredients {
 .ingredients ul {
     list-style-type: none;
     padding-left: 0;
-    margin: 0;
+}
+
+.ingredients div {
+    position: sticky;
+    top: 70px; 
+    align-self: flex-start; /* Ensures it sticks relative to the main content */
+    height: max-content; /* Allows sticky positioning to work with the sidebar's height */
 }
 
 .ingredients ul li {
@@ -334,6 +414,14 @@ section.recipe-steps {
     padding-top: 20px;
     margin-left: 20px;
     padding: 0;
+}
+/*ERROR MESSAGE*/
+.error {
+    display: block;
+    margin: 5px;
+    color: var(--grey);
+    font-size: 30px;
+
 }
 
 
@@ -381,7 +469,7 @@ section.recipe-steps {
 }
 
 #help-map{
-    background-image: url(../files/images/map_help_screenshot.png);
+    background-image: url(../files/general-images/map_help_screenshot.png);
     height: 300px;
 }
 #card-help{
@@ -466,4 +554,3 @@ section.recipe-steps {
         height: auto;
     }
 }
-
