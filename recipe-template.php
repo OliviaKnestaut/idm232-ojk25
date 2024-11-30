@@ -70,7 +70,7 @@
                                     $cuisines = explode(",", $recipe["cuisine"]);
                                     foreach ($cuisines as $cuisine): 
                                 ?>
-                                    <a class="cuisine-item <?php echo ($cuisine); ?>" href="filter-page.php?cuisine=<?php echo urlencode(trim($cuisine)); ?>"><?php echo ($cuisine); ?></a>
+                                    <a class="cuisine-item <?php echo ($cuisine); ?>" href="recipes-page.php?cuisine=<?php echo urlencode(trim($cuisine)); ?>"><?php echo ($cuisine); ?></a>
                                 
                                 <?php endforeach; ?>
                             </div>
@@ -84,7 +84,7 @@
                                 ?>
                                     <a class="diet-item <?php echo ($diet); ?>"
                                         <?php if($diet !== "None"){ ?>
-                                            href="filter-page.php?diet=<?php echo urlencode(trim($diet)); ?>"
+                                            href="recipes-page.php?diet=<?php echo urlencode(trim($diet)); ?>"
                                         <?php } ?>
                                     ><?php echo ($diet); ?></a>
                                 <?php endforeach; ?>
