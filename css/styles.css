@@ -188,7 +188,7 @@ footer{
 }
 
 .cuisine, .diet {
-    align-items: flex-start;
+    align-items: flex-start
 }
 
 .diet div, .cuisine div{
@@ -438,18 +438,29 @@ section.recipe-steps {
 .search-container {
     display: flex;
     align-items: center;
-    gap: 10px;
+    justify-content: center;
     padding: 10px 0;
+    gap: 10px;
 }
-
 /* Search input styling */
-.search-input {
+.search-input, option{
     padding: 10px;
     font-size: 16px;
-    border: 1px solid #ccc;
     border-radius: 50vw;
     flex: 1;
     min-width: 100px; /* Ensures it doesn't shrink too much */
+    color: #333;
+}
+.search{
+    border: 2px solid #ccc;
+    width: 46vw;
+}
+form{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
 }
 
 /* Search button styling */
@@ -493,6 +504,16 @@ section.recipe-steps {
 
 .style-tile{
     width: 100%;
+}
+
+
+@media(max-width: 850px){
+    .search-container {
+        flex-direction: column;
+    }
+    .search {
+        width: 75vw;
+    }
 }
 
 /*SMALL SCREENS*/
@@ -560,5 +581,13 @@ section.recipe-steps {
     #card-help{
         width: 100%;
         height: auto;
+    }
+
+
+}
+
+@media(max-width: 500px){
+    .search {
+        width: 65vw;
     }
 }

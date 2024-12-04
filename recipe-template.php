@@ -6,6 +6,7 @@
     <title>Recipe Template</title>
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/navigation.css">
+    <link rel="icon" href="files/general-images/grey-logo.svg">
 </head>
 <body>
 
@@ -15,7 +16,7 @@
 
         <?php
         include("header.php");
-        include 'database-connection.php';
+        require_once 'includes/db.php';
 
 
         $recipe_id = isset($_GET['id']) ? (int)$_GET['id'] : 0;

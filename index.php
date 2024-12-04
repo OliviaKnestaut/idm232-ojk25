@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/navigation.css">
     <link rel="stylesheet" href="css/map.css">
+    <link rel="icon" href="files/general-images/grey-logo.svg">
 </head>
 <body>
 
