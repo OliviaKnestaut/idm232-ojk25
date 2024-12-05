@@ -27,7 +27,8 @@
         $all_recipes = [];
 
 
-        // Loop through recipes to filter based on combinations
+// ------------------------------------- FILTER LOGIC --------------------------------------
+
 if ($result && mysqli_num_rows($result) > 0) {
     while ($row = mysqli_fetch_assoc($result)) {
         $cuisines = array_map('trim', explode(',', $row['cuisine']));
@@ -51,108 +52,107 @@ if ($result && mysqli_num_rows($result) > 0) {
             $filtered_recipes[] = $row;
         }
     }
-}
+} ?>
 
 
-?>
+<div class="body">
+    <?php include("header.php") ?>
 
-    <div class="body">
-        <?php include("header.php") ?>
-        
 <!-- -------------------------- FILTERS -------------------------- --> 
-<div class="search-container">
-<form method="GET" action="recipes-page.php" class="filter-form">
-        <!-- Cuisine Dropdown -->
-        <select name="cuisine" class="dropdown search-input <?php echo ($selected_cuisine); ?>" onchange="this.form.submit()">
-            <option value="">All Cuisines</option>
-            <option class="search-input" value="American" <?php echo $selected_cuisine == 'American' ? 'selected' : ''; ?>>American</option>
-            <option class="search-input" value="Asian-Fusion" <?php echo $selected_cuisine == 'Asian-Fusion' ? 'selected' : ''; ?>>Asian-Fusion</option>
-            <option class="search-input" value="Chinese" <?php echo $selected_cuisine == 'Chinese' ? 'selected' : ''; ?>>Chinese</option>
-            <option class="search-input" value="French" <?php echo $selected_cuisine == 'French' ? 'selected' : ''; ?>>French</option>
-            <option class="search-input" value="Indian" <?php echo $selected_cuisine == 'Indian' ? 'selected' : ''; ?>>Indian</option>
-            <option class="search-input" value="Italian" <?php echo $selected_cuisine == 'Italian' ? 'selected' : ''; ?>>Italian</option>
-            <option class="search-input" value="Japanese" <?php echo $selected_cuisine == 'Japanese' ? 'selected' : ''; ?>>Japanese</option>
-            <option class="search-input" value="Korean" <?php echo $selected_cuisine == 'Korean' ? 'selected' : ''; ?>>Korean</option>
-            <option class="search-input" value="Mediterranean" <?php echo $selected_cuisine == 'Mediterranean' ? 'selected' : ''; ?>>Mediterranean</option>
-            <option class="search-input" value="Mexican" <?php echo $selected_cuisine == 'Mexican' ? 'selected' : ''; ?>>Mexican</option>
-            <option class="search-input" value="Middle Eastern" <?php echo $selected_cuisine == 'Middle Eastern' ? 'selected' : ''; ?>>Middle Eastern</option>
-            <option class="search-input" value="Seasonal" <?php echo $selected_cuisine == 'Seasonal' ? 'selected' : ''; ?>>Seasonal</option>
-            <option class="search-input" value="Seafood" <?php echo $selected_cuisine == 'Seafood' ? 'selected' : ''; ?>>Seafood</option>
-            <option class="search-input" value="Southern-Style" <?php echo $selected_cuisine == 'Southern-Style' ? 'selected' : ''; ?>>Southern-Style</option>
-            <option class="search-input" value="Thai" <?php echo $selected_cuisine == 'Thai' ? 'selected' : ''; ?>>Thai</option>
-        </select>
 
-        <!-- Diet Dropdown -->
-        <select name="diet" class="dropdown search-input <?php echo ($selected_diet); ?>" onchange="this.form.submit()">
-            <option value="">All Diets</option>
-            <option class="search-input" value="Gluten Free" <?php echo $selected_diet == 'Gluten Free' ? 'selected' : ''; ?>>Gluten Free</option>
-            <option class="search-input" value="Halal" <?php echo $selected_diet == 'Halal' ? 'selected' : ''; ?>>Halal</option>
-            <option class="search-input" value="Pescatarian" <?php echo $selected_diet == 'Pescatarian' ? 'selected' : ''; ?>>Pescatarian</option>
-            <option class="search-input" value="Spicy" <?php echo $selected_diet == 'Spicy' ? 'selected' : ''; ?>>Spicy</option>
-            <option class="search-input" value="Vegan" <?php echo $selected_diet == 'Vegan' ? 'selected' : ''; ?>>Vegan</option>
-            <option class="search-input" value="Vegetarian" <?php echo $selected_diet == 'Vegetarian' ? 'selected' : ''; ?>>Vegetarian</option>
-        </select>
-    </form>
+    <div class="search-container">
+        <form method="GET" action="recipes-page.php" class="filter-form">
+            <!-- Cuisine Dropdown -->
+            <select name="cuisine" class="dropdown search-input <?php echo ($selected_cuisine); ?>" onchange="this.form.submit()">
+                <option value="">All Cuisines</option>
+                <option class="search-input" value="American" <?php echo $selected_cuisine == 'American' ? 'selected' : ''; ?>>American</option>
+                <option class="search-input" value="Asian-Fusion" <?php echo $selected_cuisine == 'Asian-Fusion' ? 'selected' : ''; ?>>Asian-Fusion</option>
+                <option class="search-input" value="Chinese" <?php echo $selected_cuisine == 'Chinese' ? 'selected' : ''; ?>>Chinese</option>
+                <option class="search-input" value="French" <?php echo $selected_cuisine == 'French' ? 'selected' : ''; ?>>French</option>
+                <option class="search-input" value="Indian" <?php echo $selected_cuisine == 'Indian' ? 'selected' : ''; ?>>Indian</option>
+                <option class="search-input" value="Italian" <?php echo $selected_cuisine == 'Italian' ? 'selected' : ''; ?>>Italian</option>
+                <option class="search-input" value="Japanese" <?php echo $selected_cuisine == 'Japanese' ? 'selected' : ''; ?>>Japanese</option>
+                <option class="search-input" value="Korean" <?php echo $selected_cuisine == 'Korean' ? 'selected' : ''; ?>>Korean</option>
+                <option class="search-input" value="Mediterranean" <?php echo $selected_cuisine == 'Mediterranean' ? 'selected' : ''; ?>>Mediterranean</option>
+                <option class="search-input" value="Mexican" <?php echo $selected_cuisine == 'Mexican' ? 'selected' : ''; ?>>Mexican</option>
+                <option class="search-input" value="Middle Eastern" <?php echo $selected_cuisine == 'Middle Eastern' ? 'selected' : ''; ?>>Middle Eastern</option>
+                <option class="search-input" value="Seasonal" <?php echo $selected_cuisine == 'Seasonal' ? 'selected' : ''; ?>>Seasonal</option>
+                <option class="search-input" value="Seafood" <?php echo $selected_cuisine == 'Seafood' ? 'selected' : ''; ?>>Seafood</option>
+                <option class="search-input" value="Southern-Style" <?php echo $selected_cuisine == 'Southern-Style' ? 'selected' : ''; ?>>Southern-Style</option>
+                <option class="search-input" value="Thai" <?php echo $selected_cuisine == 'Thai' ? 'selected' : ''; ?>>Thai</option>
+            </select>
 
-    <!-- -------------------------- SEARCH BAR -------------------------- --> 
+            <!-- Diet Dropdown -->
+            <select name="diet" class="dropdown search-input <?php echo ($selected_diet); ?>" onchange="this.form.submit()">
+                <option value="">All Diets</option>
+                <option class="search-input" value="Gluten Free" <?php echo $selected_diet == 'Gluten Free' ? 'selected' : ''; ?>>Gluten Free</option>
+                <option class="search-input" value="Halal" <?php echo $selected_diet == 'Halal' ? 'selected' : ''; ?>>Halal</option>
+                <option class="search-input" value="Pescatarian" <?php echo $selected_diet == 'Pescatarian' ? 'selected' : ''; ?>>Pescatarian</option>
+                <option class="search-input" value="Spicy" <?php echo $selected_diet == 'Spicy' ? 'selected' : ''; ?>>Spicy</option>
+                <option class="search-input" value="Vegan" <?php echo $selected_diet == 'Vegan' ? 'selected' : ''; ?>>Vegan</option>
+                <option class="search-input" value="Vegetarian" <?php echo $selected_diet == 'Vegetarian' ? 'selected' : ''; ?>>Vegetarian</option>
+            </select>
+        </form>
 
-    <form   action="recipes-page.php" method="get">
-        <input type="text" class="search-input search" name="search" placeholder="Search...">
-        <button class="button" type="submit">SEARCH</button>
+<!-- -------------------------- SEARCH BAR -------------------------- --> 
 
-        <?php if (!empty($selected_diet) && !empty($selected_cuisine)){ ?>
-            <input type="hidden" name="diet" value="<?php echo $selected_diet; ?>">
-            <input type="hidden" name="cuisine" value="<?php echo $selected_cuisine; ?>">
-        <?php } else if (!empty($selected_diet)){ ?>
-            <input type="hidden" name="diet" value="<?php echo $selected_diet; ?>">
-        <?php } else if (!empty($selected_cuisine)){ ?>
-            <input type="hidden" name="cuisine" value="<?php echo $selected_cuisine; ?>">
-        <?php } ?>
-    </form>
-</div>
+        <form action="recipes-page.php" method="get">
+            <input type="text" class="search-input search" name="search" placeholder="Search...">
+            <button class="button" type="submit">SEARCH</button>
 
-
+            <?php if (!empty($selected_diet) && !empty($selected_cuisine)){ ?>
+                <input type="hidden" name="diet" value="<?php echo $selected_diet; ?>">
+                <input type="hidden" name="cuisine" value="<?php echo $selected_cuisine; ?>">
+            <?php } else if (!empty($selected_diet)){ ?>
+                <input type="hidden" name="diet" value="<?php echo $selected_diet; ?>">
+            <?php } else if (!empty($selected_cuisine)){ ?>
+                <input type="hidden" name="cuisine" value="<?php echo $selected_cuisine; ?>">
+            <?php } ?>
+        </form>
+    </div>
 
 <!-- -------------------------- PAGE TITLE -------------------------- --> 
 
-        <div class="title">
-            <h1><?php 
-                    if ($selected_cuisine) {
-                        echo ($selected_cuisine);
-                    } elseif ($selected_diet) {
-                        echo ($selected_diet);
-                    } else {
-                        echo "All";
-                    }
-                ?> Recipes</h1>
-        </div>
+    <div class="title">
+        <h1><?php 
+                if ((!empty($search_query) || !empty($selected_cuisine) || !empty($selected_diet)) && empty($filtered_recipes)) {
+                    echo "No Recipes Found";
+                } elseif ($selected_cuisine) {
+                    echo ($selected_cuisine). " Recipes";
+                } elseif ($selected_diet) {
+                    echo ($selected_diet). " Recipes";
+                } elseif ($search_query){
+                    echo "\"".($search_query)."\" Recipes";
+                } else {
+                    echo "All Recipes";
+                } ?>
+        </h1>
+    </div>
 
 <!-- -------------------------- DISPLAY RECIPES -------------------------- --> 
 
-        <div class="recipe-grid">
-            
-            <?php
-            //By Filters
-            if (!empty($filtered_recipes) && $selected_diet !== "None"){
-                foreach ($filtered_recipes as $recipe){
-                    include("recipe-card.php");  
-                }
-            //Display All
-            } else {
-                foreach ($all_recipes as $recipe){
-                    include("recipe-card.php");    
-                }
-            } ?>
-                
-        </div>
-    </div>
+    <div class="recipe-grid">
 
+        <?php
+        //By Filters
+        if (!empty($filtered_recipes) && $selected_diet !== "None"){
+            foreach ($filtered_recipes as $recipe){
+                include("recipe-card.php");  
+            }
+        //Display All
+        } else {
+            foreach ($all_recipes as $recipe){
+                include("recipe-card.php");    
+            }
+        } ?>
+
+    </div>
+</div>
 
     <?php
         include("footer.php");
         mysqli_close($connection);
     ?>
 
-    
 </body>
 </html>

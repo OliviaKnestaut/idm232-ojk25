@@ -1,3 +1,5 @@
+<!-- -------------------------- FOOTER INCLUDE -------------------------- --> 
+
 <footer>
     <a href="design-inventory.php" class="logo footer-link"><h2>Design Inventory</h2></a>
     <a href="index.php" class="logo">

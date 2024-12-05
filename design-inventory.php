@@ -9,6 +9,9 @@
     <link rel="icon" href="files/general-images/grey-logo.svg">
 </head>
 <body>
+
+<!-- -------------------------- DESIGN INVENTORY -------------------------- --> 
+
     <div class="body">
         <?php include("header.php") ?>
 

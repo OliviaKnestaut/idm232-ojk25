@@ -1,19 +1,27 @@
+<!-- -------------------------- RECIPE CARD -------------------------- --> 
+
 <div class="recipe-card">
+
+    <!-- --- IMAGE --- --> 
     <a href="recipe-template.php?id=<?php echo $recipe['recipe']; ?>">
         <div class="recipe-image" style="background-image: url('<?php echo ($recipe["main image"]); ?>') !important"></div>
     </a>
     <div class="recipe-content">
-        <a href="recipe-template.php?id=<?php echo $recipe['recipe']; ?>"">
-            
+        <!-- --- TITLE --- --> 
+        <a href="recipe-template.php?id=<?php echo $recipe['recipe']; ?>">
             <h2 class="recipe-title"><?php echo ($recipe["title"]); ?></h2>
             <h3 class="recipe-subtitle"><?php echo ($recipe["subtitle"]); ?></h3>
         </a>
         <div class="recipe-details">
+
+            <!-- --- COOK TIME --- --> 
             <div class="cook-time">
                 <h4>Cook Time</h4>
                 <img class="cook-time-img" src="files/icons/<?php echo ($recipe["cook time"]); ?>-min.svg" alt="">
                 <p><?php echo ($recipe["cook time"]); ?> Min</p>
             </div>
+
+            <!-- --- SERVINGS --- --> 
             <div class="servings">
                 <h4>Servings</h4>
 
@@ -25,6 +33,8 @@
                 <?php endfor; ?>
                 <p><?php echo ($recipe["servings"]); ?></p>
             </div>
+
+            <!-- --- CUISINE --- --> 
             <div class="cuisine" >
                 <h4>Cuisine</h4>
                 <div>
@@ -37,8 +47,9 @@
                 
                 <?php endforeach; ?>
                 </div>
-
             </div>
+
+            <!-- --- DIET --- --> 
             <div class="diet">
                 <h4>Diet</h4>
                 <div>

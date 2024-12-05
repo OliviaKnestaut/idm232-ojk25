@@ -432,6 +432,13 @@ section.recipe-steps {
 
 }
 
+not-found{
+    color: var(--yellow);
+    font-size: 30px;
+    margin: 0 10px;
+    text-align: center;
+}
+
 
 
 /* Search bar container */
@@ -493,6 +500,10 @@ form{
 }
 #card-help{
     height: 300px;
+    border-radius: 10px;
+}
+#search-bar-img{
+    width: 100%;
     border-radius: 10px;
 }
 .help-section{

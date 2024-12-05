@@ -1,3 +1,5 @@
+<!-- -------------------------- DATABASE CONNECTION -------------------------- --> 
+
 <?php
 $db_server = getenv('DB_SERVER');
 $db_username = getenv('DB_USERNAME');

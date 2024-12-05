@@ -20,6 +20,7 @@ html{
 
 a {
     color: var(--grey);
+    text-decoration: none;
 }
 img.compass-logo{
     height: 43px;

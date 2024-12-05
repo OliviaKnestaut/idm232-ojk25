@@ -46,6 +46,9 @@
     z-index: 100;
     transition-timing-function: cubic-bezier(.63,-0.33,.32,1.4);
     visibility: hidden;
+    color: #4B4B4B;
+    font-size: 20px;
+    margin: 8px 0;
 }
 
 .pin1 {
