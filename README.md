@@ -1,4 +1,4 @@
-# idm232-ojk25
+# IDM 232: Scripting for Web Design II - Final Project
 ## https://digmstudents.westphal.drexel.edu/~ojk25/index.php
 
 This recipe database website, Culinary Compass, is the final project for Drexel University's IDM 232: Scripting for Web Design II.
