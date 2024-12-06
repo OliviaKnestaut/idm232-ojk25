@@ -84,7 +84,7 @@ footer{
     margin-bottom: 10px;
 }
 
-/*About Chef*/
+/* ------------------- About Chef ------------------- */
 .about{
     margin: 40px 0;
 }
@@ -113,7 +113,7 @@ footer{
     text-decoration: none;
 }
 
-/* All Recipes Grid */
+/* ------------------- Recipes Grid ------------------- */
 .recipe-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
@@ -178,7 +178,7 @@ footer{
     margin: 20px;
 }
 
-/*Recipe Details*/
+/* ------------------- Recipe Details ------------------- */
 
 .cook-time, .cuisine, .diet, .servings{
     display: flex;
@@ -289,8 +289,6 @@ footer{
     color: #333;
 }
 
-
-
 /*Diet*/
 .diet-item, .cuisine-item{
     padding: 2px 12px;
@@ -299,15 +297,13 @@ footer{
     font-weight: 600;
 }
 
-
-
 /*Servings*/
 .serving-img{
     width: 20px;
 }
 
 
-/*Single Recipe Page*/
+/* ------------------- Single Recipe Page ------------------- */
 
 .container, aside, .recipe-steps{
     margin: 10px 0;
@@ -336,9 +332,9 @@ footer{
     width: 60%;
     height: 500px;
     border-radius: 10px;
-    background-position: center; /* Center the image */
-    background-repeat: no-repeat; /* Do not repeat the image */
-    background-size: cover; /* Resize the background image to cover the entire container */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .recipe-description {
@@ -355,7 +351,7 @@ main.recipe-content {
     display: flex;
 }
 
-/* Ingredients Sidebar */
+/* ------------------- Ingredients Sidebar ------------------- */
 aside.ingredients {
     width: 25%;
 }
@@ -375,15 +371,16 @@ aside.ingredients {
 .ingredients div {
     position: sticky;
     top: 70px; 
-    align-self: flex-start; /* Ensures it sticks relative to the main content */
-    height: max-content; /* Allows sticky positioning to work with the sidebar's height */
+    align-self: flex-start;
+    height: max-content;
 }
 
 .ingredients ul li {
     margin: 5px 0;
 }
 
-/* Recipe Steps */
+/* ------------------- Recipe Steps------------------- */
+
 section.recipe-steps {
     width: 75%;
     margin-left: 20px;
@@ -423,7 +420,9 @@ section.recipe-steps {
     margin-left: 20px;
     padding: 0;
 }
-/*ERROR MESSAGE*/
+
+/*Error Messages*/
+
 .error {
     display: block;
     margin: 5px;
@@ -432,16 +431,8 @@ section.recipe-steps {
 
 }
 
-not-found{
-    color: var(--yellow);
-    font-size: 30px;
-    margin: 0 10px;
-    text-align: center;
-}
+/* ------------------- Search Bar ------------------- */
 
-
-
-/* Search bar container */
 .search-container {
     display: flex;
     align-items: center;
@@ -449,13 +440,13 @@ not-found{
     padding: 10px 0;
     gap: 10px;
 }
-/* Search input styling */
+
 .search-input, option{
     padding: 10px;
     font-size: 16px;
     border-radius: 50vw;
     flex: 1;
-    min-width: 100px; /* Ensures it doesn't shrink too much */
+    min-width: 100px;
     color: #333;
 }
 .search{
@@ -470,7 +461,7 @@ form{
     gap: 10px;
 }
 
-/* Search button styling */
+/* Search Button */
 .button {
     padding: 10px 20px;
     
@@ -530,7 +521,7 @@ form{
 /*SMALL SCREENS*/
 @media (max-width: 768px) {
     h1 {
-        font-size: 14vw;
+        font-size: 10vw;
         line-height: 14vw;
     }
     .about{
@@ -572,7 +563,7 @@ form{
         width: 100%;
         margin-bottom: 20px;
         border-right: none;
-        position: static; /* Sticky disabled on small screens */
+        position: static;
     }
 
     section.recipe-steps {
@@ -593,7 +584,6 @@ form{
         width: 100%;
         height: auto;
     }
-
 
 }
 
