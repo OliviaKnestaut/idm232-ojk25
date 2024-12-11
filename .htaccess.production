@@ -1,4 +1,0 @@
-SetEnv DB_SERVER localhost
-SetEnv DB_USERNAME ojk25
-SetEnv DB_PASSWORD SSfxtBMLDDM6/CpE
-SetEnv DB_NAME ojk25_db
